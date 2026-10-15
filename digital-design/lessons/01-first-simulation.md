@@ -75,8 +75,47 @@ If you got an error instead, stop here and look it up in
 
 ## Step 3: Read the design
 
-Open `blinker.v` in your editor (or run `nano blinker.v`). It's about fifteen lines. This is
-the part that matters:
+### Open your folder in VS Code
+
+Stay in the same terminal, in your folder, and run:
+
+```bash
+code .
+```
+
+The dot means "this folder." VS Code opens with your files listed on the left.
+
+**Windows:** look at the bottom-left corner of VS Code. It should say **WSL: Ubuntu**. If it
+doesn't, you opened the Windows version of VS Code by itself and it can't see your files.
+Close it and run `code .` again from the Ubuntu window. If you get `code: command not found`,
+VS Code isn't installed yet. See Part E of [setup](../../setup/README.md), then close and
+reopen Ubuntu.
+
+### Turn on Verilog colors (one time)
+
+Click `blinker.v` in the left sidebar. If it's all one color, VS Code doesn't know it's
+Verilog yet. Fix it once:
+
+1. Click the **Extensions** icon on the far left (four small squares), or press Ctrl+Shift+X
+   (Cmd+Shift+X on a Mac).
+2. Search for **Verilog-HDL/SystemVerilog**. Pick the one by **mshr-h**.
+3. Click **Install**. On Windows, if the button says **Install in WSL: Ubuntu**, click that.
+4. Click back on `blinker.v`. Words like `module`, `always`, and `reg` should now be colored.
+
+Faster, if you'd rather type it: run `code --install-extension mshr-h.veriloghdl` in the
+terminal.
+
+### Use one window from here on
+
+Open VS Code's built-in terminal: **Terminal**, then **New Terminal**. It appears at the
+bottom, already in your folder. Run `pwd` to check. It should end in your username. From now
+on, read code on top and run commands on the bottom. No more switching windows.
+
+No VS Code at all? Run `nano blinker.v` to read the file, and press Ctrl+X to exit.
+
+### Read the design
+
+`blinker.v` is about fifteen lines. This is the part that matters:
 
 ```verilog
 reg [2:0] counter;

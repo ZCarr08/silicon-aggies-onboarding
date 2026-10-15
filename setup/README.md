@@ -396,6 +396,27 @@ on the left:
   `cd` into a folder and type `code .` to open it.
 - **Verilog-HDL/SystemVerilog** by mshr-h, for syntax colors in `.v` and `.sv` files.
 
+Step by step:
+
+1. Install VS Code on Windows or Mac from the link above. On Windows, install it in Windows,
+   not inside Ubuntu.
+2. **Windows only:** open VS Code, click the **Extensions** icon (four small squares on the
+   far left, or Ctrl+Shift+X), search **WSL**, and install the one by Microsoft. Then close
+   and reopen your Ubuntu window.
+3. Open the repo from the terminal:
+
+   ```bash
+   cd ~/silicon-aggies-onboarding
+   code .
+   ```
+
+   On Windows, the bottom-left corner should say **WSL: Ubuntu**.
+4. In that window, open **Extensions** again, search **Verilog-HDL/SystemVerilog**, pick
+   the one by **mshr-h**, and click **Install** (on Windows, **Install in WSL: Ubuntu** if
+   that's what the button says). Or run `code --install-extension mshr-h.veriloghdl` in the
+   terminal.
+5. Open any `.v` file. If `module` and `always` are colored, you're done.
+
 You can run every command in this repo from VS Code's built-in terminal instead of a
 separate window. See [Using the terminal inside VS Code](#using-the-terminal-inside-vs-code).
 
